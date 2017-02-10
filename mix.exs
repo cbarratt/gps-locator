@@ -19,7 +19,7 @@ defmodule GpsLogger.Mixfile do
   def application do
     [mod: {GpsLogger, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :edeliver]]
   end
 
   # Specifies which paths to compile per environment.
@@ -30,14 +30,18 @@ defmodule GpsLogger.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.2.1"},
-     {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, "~> 3.0"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.6"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+    [
+      {:phoenix, "~> 1.2.1"},
+      {:phoenix_pubsub, "~> 1.0"},
+      {:phoenix_ecto, "~> 3.0"},
+      {:postgrex, ">= 0.0.0"},
+      {:phoenix_html, "~> 2.6"},
+      {:phoenix_live_reload, "~> 1.0", only: :dev},
+      {:gettext, "~> 0.11"},
+      {:cowboy, "~> 1.0"},
+      {:edeliver, "~> 1.4.2"},
+      {:distillery, ">= 0.8.0", warn_missing: false}
+    ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
