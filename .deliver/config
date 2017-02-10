@@ -6,9 +6,9 @@ BUILD_HOST="home.barratt.me"
 BUILD_USER="root"
 BUILD_AT="/tmp/edeliver/gps-logger/builds"
 
-# STAGING_HOSTS="stage.myapp.com"
-# STAGING_USER="web"
-DELIVER_TO="/root/web"
+PRODUCTION_HOSTS="home.barratt.me" # deploy / production hosts separated by space
+PRODUCTION_USER="root" # local user at deploy hosts
+DELIVER_TO="/root/gps-logger" # deploy directory on production hosts
 
 # For *Phoenix* projects, symlink prod.secret.exs to our tmp source
 pre_erlang_get_and_update_deps() {
