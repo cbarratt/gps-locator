@@ -1,6 +1,7 @@
 # .deliver/config
 
 APP="gps-logger"
+USING_DISTILLERY=true
 
 BUILD_HOST="home.barratt.me"
 BUILD_USER="root"
