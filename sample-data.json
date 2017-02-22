@@ -1,0 +1,24 @@
+%{
+  "locations" => [
+    %{
+      "geometry" => %{"coordinates" => [-1.531081422644767,53.78956234209475], "type" => "Point"},
+      "properties" => %{
+        "activity" => "other",
+        "altitude" => 0,
+        "battery_level" => 1,
+        "battery_state" => "charging",
+        "deferred" => 0,
+        "desired_accuracy" => 100,
+        "horizontal_accuracy" => 1414,
+        "locations_in_payload" => 1,
+        "motion" => [],
+        "pauses" => false,
+        "significant_change" => 0,
+        "speed" => -1,
+        "timestamp" => "2017-02-22T12:26:58Z",
+        "vertical_accuracy" => -1
+      },
+      "type" => "Feature"
+    }
+  ]
+}
