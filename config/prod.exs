@@ -19,6 +19,16 @@ config :gps_logger, GpsLogger.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :gps_logger, GpsLogger.Endpoint,
+  secret_key_base: "u+UXn00lclqy+xT29bVH99ue1vwGo03B241L+g7Ka4VZYU4ucHQ72KLzStfjr58C"
+
+# Configure your database
+config :gps_logger, GpsLogger.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  ssl: true
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
@@ -55,7 +65,3 @@ config :logger, level: :info
 #
 #     config :gps_logger, GpsLogger.Endpoint, server: true
 #
-
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
