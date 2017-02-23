@@ -14,9 +14,15 @@ defmodule GpsLogger.Router do
   end
 
   scope "/", GpsLogger do
-    pipe_through :api
+    pipe_through :browser
 
-    get "/gps", TrackingController, :get_gps
-    post "/gps", TrackingController, :record_gps
+    get "/", PageController, :index
+
+    scope "/gps", GpsLogger do
+      pipe_through :api
+
+      get "/gps", TrackingController, :get_gps
+      post "/gps", TrackingController, :record_gps
+    end
   end
 end
